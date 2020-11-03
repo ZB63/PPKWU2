@@ -9,6 +9,11 @@ public class StringController {
 
     @GetMapping("check/{stringToCheck}")
     public String checkString(@PathVariable String stringToCheck) {
+        int bigLetters = 0;
+        int smallLetters = 0;
+        int numbers = 0;
+        int specials = 0;
+
         return "";
     }
 
