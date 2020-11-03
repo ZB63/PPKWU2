@@ -16,6 +16,7 @@ public class StringController {
         int specials = 0;
 
         bigLetters = getBigLettersCount(stringToCheck);
+        smallLetters = getSmallLettersCount(stringToCheck);
 
         return new Response(bigLetters, smallLetters, numbers, specials);
     }
@@ -26,6 +27,18 @@ public class StringController {
         int num = 0;
         for (int i=0;i<stringToCheck.length();i++) {
             if (stringToCheck.substring(i, i+1).matches("[A-Z]")) {
+                num++;
+            }
+        }
+        return num;
+    }
+
+    public int getSmallLettersCount(String stringToCheck) {
+        if (stringToCheck == null || stringToCheck.trim().isEmpty()) return 0;
+
+        int num = 0;
+        for (int i=0;i<stringToCheck.length();i++) {
+            if (stringToCheck.substring(i, i+1).matches("[a-z]")) {
                 num++;
             }
         }
