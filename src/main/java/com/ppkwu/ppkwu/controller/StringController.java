@@ -10,15 +10,11 @@ public class StringController {
 
     @GetMapping("check/{stringToCheck}")
     public Response checkString(@PathVariable String stringToCheck) {
-        int bigLetters = 0;
-        int smallLetters = 0;
-        int numbers = 0;
-        int specials = 0;
-
-        bigLetters = getBigLettersCount(stringToCheck);
-        smallLetters = getSmallLettersCount(stringToCheck);
-        numbers = getNumbersCount(stringToCheck);
-        specials  =getSpecialsCount(stringToCheck);
+        
+        int bigLetters = getBigLettersCount(stringToCheck);
+        int smallLetters = getSmallLettersCount(stringToCheck);
+        int numbers = getNumbersCount(stringToCheck);
+        int specials = getSpecialsCount(stringToCheck);
 
         return new Response(bigLetters, smallLetters, numbers, specials);
     }
