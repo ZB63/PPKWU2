@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class StringController {
 
     @GetMapping("check/{stringToCheck}")
-    public String rev() {
+    public String checkString() {
         return "";
     }
 
